@@ -1,9 +1,8 @@
 package com.nur.rest;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+//@RestController
 public class SecurityRestController {
 	
 	@GetMapping("/home")
@@ -39,6 +38,11 @@ public class SecurityRestController {
 	@GetMapping("/welcome")
 	public String welcome() {
 		return "Admin Details:";
+	}
+	
+	@GetMapping("/accessDenied")
+	public String accessD() {
+		return "Access Denied Page";
 	}
 
 }
