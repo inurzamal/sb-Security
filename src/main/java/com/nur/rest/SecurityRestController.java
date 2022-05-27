@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SecurityRestController {
 	
 	@GetMapping("/home")
-	public String welcome() {
+	public String home() {
 		return "Welcome to Java World..";
 	}
 	
@@ -24,6 +24,21 @@ public class SecurityRestController {
 	@GetMapping("/contact")
 	public String contact() {
 		return "Contact Details:";
+	}
+	
+	@GetMapping("/std")
+	public String std() {
+		return "Student Page:";
+	}
+	
+	@GetMapping("/admin")
+	public String admin() {
+		return "Admin Details:";
+	}
+	
+	@GetMapping("/welcome")
+	public String welcome() {
+		return "Admin Details:";
 	}
 
 }

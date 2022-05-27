@@ -1,0 +1,28 @@
+create database secureTBL;
+show databases;
+use secureTBL;
+
+create table usertab (
+uid int,
+uname varchar(30),
+upazz varchar(150),
+urole varchar(20),
+uenabled int
+);
+desc usertab;
+
+insert into usertab values(101, 'nur','$2a$10$JF.2CFf25DuWkG5HqQs8yOR.3r0Vg4nVMOwk3tQgwSV6h/hfCSipm','ADMIN',1);
+insert into usertab values(102, 'rani','$2a$10$IWHbFn50EHunRqGjMf7WVerKn3/7aV29.qxXShegPPMJKoeNY0JkK','STUDENT',1);
+insert into usertab values(103, 'simran','$2a$10$GiJHqV2Ai5iCBSU0MitJ5uVyT5OBXviTXYZcqFgE/xApFLCxidEKq','USER',1);
+
+select * from usertab;
+
+select uname, upazz, uenabled from usertab where uname=?;
+select uname, urole from usertab where uname=?;
+
+
+
+
+
+drop table usertab;
+drop database securetbl;
